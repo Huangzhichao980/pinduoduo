@@ -44,6 +44,7 @@ class SingleValidate extends CommonValidate
         'common' => [
             'client_id' => 'require|length:0,50',
             'timestamp' => 'require|length:0,50',
+            'access_token','data_type','version'
         ],
 
         'pdd.erp.order.sync' => [
@@ -51,6 +52,102 @@ class SingleValidate extends CommonValidate
             'order_state' => 'require|in:1,2',
             'waybill_no' => 'require|length:0,128',
             'logistics_id' => 'require|length:0,128',
-        ]
+        ],
+        'pdd.order.basic.list.get' => [
+
+        ],
+        'pdd.order.information.get' => [
+
+        ],
+        'pdd.order.list.get' => [
+
+        ],
+        'pdd.order.number.list.increment.get' => [
+
+        ],
+        'pdd.order.promise.info.get' => [
+
+        ],
+        'pdd.order.status.get' => [
+
+        ],
+        'pdd.nextone.logistics.warehouse.update' => [
+
+        ],
+        'pdd.rdc.pddgenius.sendgoods.cancel' => [
+
+        ],
+        'pdd.refund.address.list.get' => [
+
+        ],
+        'pdd.refund.information.get' => [
+
+        ],
+        'pdd.refund.list.increment.get' => [
+
+        ],
+        'pdd.refund.status.check' => [
+
+        ],
+        'pdd.logistics.address.get' => [
+
+        ],
+        'pdd.logistics.companies.get' => [
+
+        ],
+        'pdd.logistics.isv.trace.notify.sub' => [
+
+        ],
+        'pdd.logistics.online.create' => [
+
+        ],
+        'pdd.logistics.online.send' => [
+
+        ],
+        'pdd.logistics.online.status.query' => [
+
+        ],
+        'pdd.logistics.ordertrace.get' => [
+
+        ],
+        'pdd.virtual.game.server.query' => [
+
+        ],
+        'pdd.virtual.mobile.charge.notify' => [
+
+        ],
+        'pdd.delete.draft.commit' => [
+
+        ],
+        'pdd.delete.goods.commit' => [
+
+        ],
+        'pdd.goods.add' => [
+
+        ],
+        'pdd.goods.authorization.cats' => [
+
+        ],
+        'pdd.goods.cat.rule.get' => [
+
+        ],
+        'pdd.goods.cat.template.get' => [
+
+        ],
+        'pdd.goods.cats.get' => [
+
+        ],
+        'pdd.goods.child.sku.edit' => [
+
+        ],
+        'pdd.goods.commit.detail.get' => [
+
+        ],
+        'pdd.goods.commit.list.get' => [
+
+        ],
+        'pdd.goods.commit.status.get' => [
+
+        ],
     ];
 }

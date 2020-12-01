@@ -18,6 +18,11 @@ class Tools extends CommonTools
      * @return bool|mixed|string
      */
     public static function buildRequest($url,$requestParams,$requestWay,$secret,$isBackUrl=false,$method=''){
+        /*判断接口是否需要授权，需要的话必须传access_token*/
+        if ($requestWay === true && !isset($requestParams['access_token'])){
+            throw new \Exception('access_token缺失',-10025);
+        }
+
         /*生成签名*/
         if (!in_array($method,['merchant_auth','mobile_auth','guest_auth'])){
             $requestParams['sign'] = self::makeSign($requestParams,$secret,$requestWay);
